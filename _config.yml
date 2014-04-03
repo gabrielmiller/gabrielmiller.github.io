@@ -1,0 +1,7 @@
+name: "L. Gabriel Miller"
+description: "Computer nerd renaissance man"
+
+url: "http://www.gabrielmiller.org/"
+
+paginate: 5
+permalink: "/:year/:title.html"
