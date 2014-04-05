@@ -72,7 +72,7 @@ def main():
         chunkDict[item].binaryToString()
         chunkDict[item].unbreakList()
         output=output[:]+chunkDict[item].createOutput()
-    print "Your output is \\'%s\\'" % output
+    print "Your output is '%s'" % output
 
 if __name__ == "__main__":
     main()
