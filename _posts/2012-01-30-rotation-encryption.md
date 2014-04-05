@@ -1,6 +1,7 @@
 ---
-title: Rotation Encryption
 layout: post
+title: Rotation Encryption
+slug: rotation-encryption
 date: 2012-01-30
 categories:
  - Python

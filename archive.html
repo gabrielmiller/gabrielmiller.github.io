@@ -1,0 +1,49 @@
+---
+layout: base
+---
+
+<div id="archives">
+    <div class="categories">
+        <h3>Categories:</h3>
+        <ul>
+            {% for category in site.categories %}
+            <li>
+                <a href="#{{ category[0] }}">{{ category[0] }}</a>
+                <span></span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="posts">
+        <h3>Posts:</h3>
+        <h4>Current displaying posts <span id="filter"></span></h4>
+        <ul>
+        {% for post in site.posts %}
+            <li class="{% for category in post.categories %}{{ category }} {% endfor %} post">
+                <span>[{{ post.date | date: "%Y-%m-%d" }}]</span>
+                <a href="/{{ post.date | date: "%Y"}}/{{ post.slug }}.html">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.categories a').click(function(){
+            highlightCategory($(this).context.hash.slice(1));
+        });
+        highlightCategory(window.location.hash.slice(1));
+    });
+
+    function highlightCategory(category){
+        if(category === undefined || category === ''){
+            $('#filter').text('from all categories');
+            return;
+        }
+        var post_selector = '.'+category;
+        $('.post').fadeTo(0, 0.1);
+        $(post_selector).fadeTo(0, 1);
+        $('#filter').html('categorized as '+category+' [<a href="/archive.html">x</a>]');
+    }
+</script>

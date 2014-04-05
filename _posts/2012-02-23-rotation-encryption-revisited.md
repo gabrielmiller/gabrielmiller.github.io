@@ -1,7 +1,8 @@
 ---
-title: Rotation Encryption Revisited
-date: 2012-02-23
 layout: post
+title: Rotation Encryption Revisited
+slug: rotation-encryption-revisited
+date: 2012-02-23
 categories:
  - Python
  - Code

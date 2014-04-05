@@ -7,7 +7,7 @@ layout: post
     <span class="date"{{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
     <ul class="categories">
         {% for category in site.posts.first.categories %}
-        <li><a href="/archive/{{ category }}">{{ category }}</a></li>
+        <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
         {% endfor %}
     </ul>
     <div class="body">

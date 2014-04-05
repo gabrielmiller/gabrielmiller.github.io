@@ -4,10 +4,10 @@ layout: base
 
 <div class="post">
     <h3>{{ page.title }}</h3>
-    <span class="date">{{ page.date | date: "%Y-%b-%d" }}</span>
+    <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
     <ul class="categories">
         {% for category in page.categories %}
-        <li><a href="/archive/{{ category }}">{{ category }}</a></li>
+        <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
         {% endfor %}
     </ul>
     <div class="body">

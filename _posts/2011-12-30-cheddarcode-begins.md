@@ -1,7 +1,8 @@
 ---
-title: "Cheddarcode begins!"
-date: 2011-12-30
 layout: post
+title: Cheddarcode begins!
+slug: cheddarcode-begins
+date: 2011-12-30
 categories:
  - Python
  - WebDev
