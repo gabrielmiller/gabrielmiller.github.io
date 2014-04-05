@@ -1,7 +1,10 @@
 name: "L. Gabriel Miller"
 description: "Computer nerd renaissance man"
+encoding: UTF-8
 
 url: "http://www.gabrielmiller.org/"
 
 paginate: 5
 permalink: "/:year/:title.html"
+
+highlighter: pygments

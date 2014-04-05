@@ -1,0 +1,16 @@
+---
+title: "Cheddarcode begins!"
+date: 2011-12-30
+layout: post
+categories:
+ - Python
+ - WebDev
+ - Linux
+---
+
+Hi guys!
+
+
+Here's to a new website and some new adventures. I've been learning Python and a couple programs and frameworks along the way--django, git, vim, and perhaps some more in the future. You'll find posts about things I enjoy, am having trouble with, or otherwise felt like sharing. Hopefully it will all be riveting. I also plan to use this blog as a learning experience; I will be posting original work and then revisiting it to revise and find my old mistakes.
+
+Cheers!

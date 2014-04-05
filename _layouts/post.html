@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<div class="post">
+    <h3>{{ page.title }}</h3>
+    <span class="date">{{ page.date | date: "%Y-%b-%d" }}</span>
+    <ul class="categories">
+        {% for category in page.categories %}
+        <li><a href="/archive/{{ category }}">{{ category }}</a></li>
+        {% endfor %}
+    </ul>
+    <div class="body">
+        {{ content }}
+    </div>
+</div>
