@@ -16,7 +16,7 @@ First install ruby. I am developing against 2.1.0p0, but older versions should b
     gem install jekyll
     jekyll build
 
-To watch files and build when they are edited, use the following parameters: 
+To watch files, build when they are edited, and run an internal HTTP server for developing, use the following parameters: 
 
     jekyll serve --watch
 
