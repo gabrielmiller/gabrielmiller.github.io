@@ -20,6 +20,18 @@ To watch files, build when they are edited, and run an internal HTTP server for 
 
     jekyll serve --watch
 
+
+### Sass
+
+Make sure you have ruby installed. You'll also need to install compass:
+
+    gem install compass
+
+For development you can run the following flags on compass to watch for file changes and recompile css when changes are made: 
+
+    compass watch -c scss/config.rb
+
+
 ### Deploying
 
 This section has yet to be written

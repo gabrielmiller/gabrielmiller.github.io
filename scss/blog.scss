@@ -1,0 +1,150 @@
+@import "compass/layout/sticky-footer";
+@import "breakpoint";
+
+$footer-height: 128px;
+
+@include sticky-footer($footer-height, "#page-wrapper", "#footer-spacer", "#footer");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    list-style: none;
+
+    li {
+        display: inline;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#page-wrapper {
+
+    #navigation-wrapper {
+        height: 40px;
+        background: #444;
+        border-bottom: 4px solid #66DC00;
+
+        h1 {
+            display: inline;
+            a { 
+                color: white;
+                margin-left: 8px;
+
+                &:visited {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    #navigation {
+        display: inline;
+        ul {
+            float: right;
+            list-style: none;
+            margin-top: 6px;
+
+            li {
+                font-size: 24px;
+                display: inline;
+                margin: 8px 12px;
+            }
+        }
+        a { 
+            color: white;
+
+            &:visited {
+                color: white;
+            }
+        }
+    }
+
+    #content {
+        padding: 8px;
+    }
+
+    #post {
+        ul {
+            list-style: disc;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+    #posts {
+        ul {
+            list-style: disc;
+
+            li {
+                display: block;
+            }
+        }
+    }
+
+    #categories {
+        margin-bottom: 32px;
+
+        li {
+            padding: 8px; }
+    }
+}
+
+#footer {
+    color: white;
+    background: #444;
+
+    p {
+        padding: 8px;
+    }
+
+    #social {
+        a {
+            padding-left: 8px;
+            color: #5b87a8;
+
+            &:hover {
+                color: #7ebbe8;
+            }
+        }
+    }
+    #copyright {
+        //text-align: center;
+    }
+}
