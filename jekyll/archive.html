@@ -16,7 +16,7 @@ layout: base
     </div>
     <div id="posts">
         <h3>Posts:</h3>
-        <h5>Current displaying posts <span id="filter"></span></h5>
+        <h5>Displaying posts <span id="filter"></span></h5>
         <ul>
         {% for post in site.posts %}
             <li class="{% for category in post.categories %}{{ category }} {% endfor %} post">

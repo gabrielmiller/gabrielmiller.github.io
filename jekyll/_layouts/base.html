@@ -13,6 +13,10 @@
     <div id="navigation-wrapper">
         <h1><a href="/">L. Gabriel Miller</a></h1>
         <div id="navigation">
+            <input type="checkbox" id="navigation-toggle-checkbox">
+            <label id="navigation-toggle" for="navigation-toggle-checkbox">
+                <i class="fa fa-2x fa-bars"></i>
+            </label>
             <ul>
                 <li><a href="/archive.html">Archive</a></li>
                 <li><a href="/projects.html">Projects</a></li>
@@ -29,8 +33,8 @@
 
 </div>
 <div id="footer">
+    <div class="stripe"></div>
     <p id="social">
-        Connect with me
         <span>
             <a href="https://github.com/gmiller2007"><i class="fa fa-2x fa-github-square"></i></a>
             <a href="https://gittip.com/gmiller2007"><i class="fa fa-2x fa-gittip"></i></a>
@@ -38,7 +42,7 @@
             <a href="https://plus.google.com/110146363451638405094"><i class="fa fa-2x fa-google-plus-square"></i></a>
         </span>
     </p>
-    <p id="copyright">&copy; Copyright {{ site.time | date: "%Y" }} L. Gabriel Miller</p>
+    <p>&copy; Copyright {{ site.time | date: "%Y" }} L. Gabriel Miller</p>
 </div>
 
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
