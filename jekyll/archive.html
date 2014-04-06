@@ -4,7 +4,7 @@ layout: base
 
 <div id="archives">
     <div id="categories">
-        <h3>Categories:</h3>
+        <h2>Categories:</h2>
         <ul>
             {% for category in site.categories %}
             <li>
@@ -15,7 +15,7 @@ layout: base
         </ul>
     </div>
     <div id="posts">
-        <h3>Posts:</h3>
+        <h2>Posts:</h2>
         <h5>Displaying posts <span id="filter"></span></h5>
         <ul>
         {% for post in site.posts %}
@@ -44,6 +44,6 @@ layout: base
         var post_selector = '.'+category;
         $('.post').fadeTo(0, 0.1);
         $(post_selector).fadeTo(0, 1);
-        $('#filter').html('categorized as '+category+' [<a href="/archive.html">x</a>]');
+        $('#filter').html('categorized as '+category+' [<a href="/archive.html">Remove</a>]');
     }
 </script>

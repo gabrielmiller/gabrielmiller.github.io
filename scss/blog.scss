@@ -92,7 +92,9 @@ h5 {
 
     #navigation {
         display: inline-block;
-        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
 
         input[type=checkbox] {
             display: none;
@@ -189,9 +191,24 @@ h5 {
         padding: 8px;
         clear: both;
         p {
-            margin-top: 8px;
-            line-height: 24px;
-            font-size: 20px;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            margin-top: 32px;
+            line-height: 1.5em;
+
+            &:first-child {
+                margin-top: 4px;
+            }
+
+            font-size: 16px;
+            @include breakpoint($break-smartphone){
+                font-size: 20px;
+            }
+            @include breakpoint($break-tablet){
+                font-size: 24px;
+            }
+            @include breakpoint($break-desktop){
+                font-size: 28px;
+            }
         }
     }
 
@@ -240,6 +257,7 @@ h5 {
 }
 
 #footer {
+    @include user-select(none);
     color: #ddd;
     background: #444;
 
