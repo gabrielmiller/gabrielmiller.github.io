@@ -15,10 +15,10 @@ Typically a client would enter data, it would be encrypted client-side(let's hop
 Let's make some assumptions for our problem. You have a database with millions of encrypted strings. Encryption is performed client-side. It's not a login system, because you don't match a username to a password's hash, but rather just match a hash.
 
 
-<code>
-Entered Text: yourDATA
-Md5 Hash: 0e4174f5dd30d3a7c1f070ec8a393b73
-</code>
+<pre>
+    Entered Text: yourDATA
+    Md5 Hash: 0e4174f5dd30d3a7c1f070ec8a393b73
+</pre>
 
 
 In order to test if "yourDATA" is held within a database, you must confirm that the hash "0e4174f5dd30d3a7c1f070ec8a393b73" is stored in the database(assuming that the encryption has no collisions, which would lead to a false-positive result). The easiest way to maintain anonymity-that is, not let the database know exactly which data you're inspecting-is to have the database return multiple entries. Ideally, if the database could, it would send you every single hash and you would see whether or not the one you're looking for is apparent. But it's unrealistic to have a database send a single client that much data; a more realistic method would be to have your computer whittle down results by asking the database how many results correspond to just tidbits of your hash.
@@ -30,12 +30,13 @@ First your computer would ask the database how many hashes begin with "0," and t
 The problem is that as soon as you receive one single key the database can say what data you are accessing. There are some caveats: for instance, if the data was a false positive and really your data isn't in the database. If the design were to send you all of the hashes, however, at a set tolerance, then anonymity could be maintained. For instance, as soon as the database sends you the following:
 
 
-<b>0e4174f5d</b>24dcc3b5aa765d61d83
-<b>0e4174f5d</b>765d61d8327deb882cf99
-<b>0e4174f5dd30d3a7c1f070ec8a393b73</b>
-<b>0e4174f5d</b>f2ab331b0f975ae943ddc93
-(and onward)...
-
+<pre>
+    <b>0e4174f5d</b>24dcc3b5aa765d61d83
+    <b>0e4174f5d</b>765d61d8327deb882cf99
+    <b>0e4174f5dd30d3a7c1f070ec8a393b73</b>
+    <b>0e4174f5d</b>f2ab331b0f975ae943ddc93
+    (and onward)...
+</pre>
 
 We know our data is in the database. We also know that we didn't blow our cover because there were multiple results.
 
@@ -52,10 +53,10 @@ Typically a client would enter data, it would be encrypted client-side(let's hop
 Let's make some assumptions for our problem. You have a database with millions of encrypted strings. Encryption is performed client-side. It's not a login system, because you don't match a username to a password's hash, but rather just match a hash.
 
 
-<code>
-Entered Text: yourDATA
-Md5 Hash: 0e4174f5dd30d3a7c1f070ec8a393b73
-</code>
+<pre>
+    Entered Text: yourDATA
+    Md5 Hash: 0e4174f5dd30d3a7c1f070ec8a393b73
+</pre>
 
 
 In order to test if "yourDATA" is held within a database, you must confirm that the hash "0e4174f5dd30d3a7c1f070ec8a393b73" is stored in the database(assuming that the encryption has no collisions, which would lead to a false-positive result). The easiest way to maintain anonymity-that is, not let the database know exactly which data you're inspecting-is to have the database return multiple entries. Ideally, if the database could, it would send you every single hash and you would see whether or not the one you're looking for is apparent. But it's unrealistic to have a database send a single client that much data; a more realistic method would be to have your computer whittle down results by asking the database how many results correspond to just tidbits of your hash.
@@ -67,11 +68,13 @@ First your computer would ask the database how many hashes begin with "0," and t
 The problem is that as soon as you receive one single key the database can say what data you are accessing. There are some caveats: for instance, if the data was a false positive and really your data isn't in the database. If the design were to send you all of the hashes, however, at a set tolerance, then anonymity could be maintained. For instance, as soon as the database sends you the following:
 
 
-<b>0e4174f5d</b>24dcc3b5aa765d61d83
-<b>0e4174f5d</b>765d61d8327deb882cf99
-<b>0e4174f5dd30d3a7c1f070ec8a393b73</b>
-<b>0e4174f5d</b>f2ab331b0f975ae943ddc93
-(and onward)...
+<pre>
+    <b>0e4174f5d</b>24dcc3b5aa765d61d83
+    <b>0e4174f5d</b>765d61d8327deb882cf99
+    <b>0e4174f5dd30d3a7c1f070ec8a393b73</b>
+    <b>0e4174f5d</b>f2ab331b0f975ae943ddc93
+    (and onward)...
+</pre>
 
 
 We know our data is in the database. We also know that we didn't blow our cover because there were multiple results.

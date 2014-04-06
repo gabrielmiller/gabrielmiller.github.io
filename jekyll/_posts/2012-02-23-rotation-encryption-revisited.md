@@ -11,13 +11,15 @@ categories:
 Here's the first revision to my rotation encryption code from about 2 months ago. As a refresher, the idea is as follows: You enter data and it is broken into 8 character packets. These packets are converted to ascii in a 8x8 table of 1s and 0s. These values are then interpreted 90 degrees from how they were entered, combined, and returned back as text. And the image I drafted to describe the process, again:
 
 
-<img src="http://www.cheddarcode.com/g/img/img1.gif">
+<div class="img-wrapper">
+    <img src="http://www.cheddarcode.com/g/img/img1.gif">
+</div>
 
 
 The goals of the revision were to make the code capable of converting more than 8 characters at a time, and making the process more modular. Here it is:
 
 
-{% highlight python %}
+{% highlight python linenos %}
 
 import copy #Import copy because deepcopy is used
 

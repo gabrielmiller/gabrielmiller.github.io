@@ -1,15 +1,17 @@
 ---
-layout: post
+layout: base
 ---
 
 <div class="post">
-    <h3>{{ site.posts.first.title }}</h3>
-    <span class="date">{{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
-    <ul class="categories">
-        {% for category in site.posts.first.categories %}
-        <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="header">
+        <h2>{{ site.posts.first.title }}</h2>
+        <span class="date">{{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
+        <ul class="categories">
+            {% for category in site.posts.first.categories %}
+            <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
     <div class="body">
         {{ site.posts.first.content }}
     </div>

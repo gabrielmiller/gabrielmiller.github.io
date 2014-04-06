@@ -16,7 +16,7 @@ layout: base
     </div>
     <div id="posts">
         <h2>Posts:</h2>
-        <h5>Displaying posts <span id="filter"></span></h5>
+        <span id="filter">Displaying posts <span id="current-filter"></span></span>
         <ul>
         {% for post in site.posts %}
             <li class="{% for category in post.categories %}{{ category }} {% endfor %} post">
@@ -38,12 +38,12 @@ layout: base
 
     function highlightCategory(category){
         if(category === undefined || category === ''){
-            $('#filter').text('from all categories');
+            $('#current-filter').text('from all categories');
             return;
         }
         var post_selector = '.'+category;
         $('.post').fadeTo(0, 0.1);
         $(post_selector).fadeTo(0, 1);
-        $('#filter').html('categorized as '+category+' [<a href="/archive.html">Remove</a>]');
+        $('#current-filter').html('categorized as '+category+' [<a href="/archive.html">Remove</a>]');
     }
 </script>

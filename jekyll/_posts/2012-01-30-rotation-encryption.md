@@ -13,14 +13,15 @@ I came upon the idea of changing viewing angle while pondering something complet
 
 The idea is that you enter data and it is broken into 8 character packets, converted to its ascii binary value, and laid into an 8x8 table of 0s and 1s. That table is then interpreted from a different viewing angle, converted back into characters, and regrouped from its 8 character packets. For instance, the string "ThisData" is entered, and a string of a bit of gobbledygook is returned:
 
-
-<img src="http://www.cheddarcode.com/g/img/img1.gif">
+<div class="img-wrapper">
+    <img src="http://www.cheddarcode.com/g/img/img1.gif">
+</div>
 
 
 I present to you the first draft code I wrote to create this behavior:
 
 
-{% highlight python %}
+{% highlight python linenos %}
 TheData=raw_input("Enter your data > ")
 TheData=str(TheData[:])
 lendiff=len(TheData)%8
