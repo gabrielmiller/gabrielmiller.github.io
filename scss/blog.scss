@@ -227,6 +227,26 @@ h5 {
         #archives, #projects, #about {
             padding: 8px;
         }
+        #projects {
+            li {
+                clear: both;
+                display: block;
+                padding-top: 32px;
+
+                .thumbnail {
+                    margin-top: 0;
+                }
+
+                p {
+                    margin-top: 0;
+                }
+            }
+        }
+        .thumbnail {
+            float: left;
+            margin-top: 20px;
+            padding: 12px;
+        }
         .highlight {
             padding: 12px 0;
             margin: 0;
