@@ -8,7 +8,9 @@ This blog will be easier to maintain(than my previous, django based blog) as it 
 
 ## Instructions
 
-### Compiling
+### Development
+
+#### Jekyll
 
 First install ruby. I am developing against 2.1.0p0, but older versions should be fine. Next install jekyll and compile the website.
 
@@ -21,7 +23,7 @@ To watch files, build when they are edited, and run an internal HTTP server for 
     jekyll serve --watch
 
 
-### Sass
+#### Sass
 
 Make sure you have ruby installed. You'll also need to install compass:
 
@@ -31,7 +33,10 @@ For development you can run the following flags on compass to watch for file cha
 
     compass watch -c scss/config.rb
 
+### Deployment
 
-### Deploying
+Run the compilation bash script:
 
-This section has yet to be written
+    ./compile.sh
+
+This will compile the site. To deploy, push the compiled contents of jekyll/_site to your server.
