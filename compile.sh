@@ -1,0 +1,20 @@
+cwd=`pwd`
+www=$cwd/jekyll/_site
+static=$cwd/jekyll/_static
+
+compass compile -c scss/config.rb
+
+rm -r $www/*
+
+cd jekyll && jekyll build
+
+for file in $(find $www -type f)
+do
+    if [ -f $file ] ; then
+        # name without extension
+        name=${file%\.*}
+        mv ${file} ${name}
+    fi ;
+done
+
+cp -r $static/* $www/.
