@@ -16,9 +16,10 @@ It's considered a <a href="http://en.wikipedia.org/wiki/Stateless_protocol">stat
 A request refers to when a web browser(e.g. Chrome, Firefox, Internet Explorer, etc.) requests a web page(Note: This isn't 100% accurate. Requests are not made <i>only</i> from internet browsers, but for a basic understanding this explanation will suffice). Think of it as though every time you either enter a URL and go to a web page, click on a link to a webpage, etc. you have just sent a request for that webpage. Here's what your request looks like when you type in "www.google.com" and go:
 
 
-<pre>    GET / HTTP/1.1
+{% highlight html %}
+    GET / HTTP/1.1
     Host: www.google.com
-</pre>
+{% endhighlight %}
 
 
 A request is a couple lines of text that describes to a <a href="http://en.wikipedia.org/wiki/Server_(computing)">server</a> what resource(s) you are trying to access. Think of it as though you're going to a library and telling the librarian that you want to access the book stored at the location "slash" under "www.google.com". The above request is going to the "google.com" domain, under the "www" subdomain for a document located at the path "/" and is using HTTP version 1.1.
@@ -30,22 +31,23 @@ There are a few different <a href="http://en.wikipedia.org/wiki/Hypertext_Transf
 The server, if it could be found, will respond with the information, if it could be found(or with an HTTP 404 error if the resource could not be found). In the case of the request we sent above, the response from google will look something <i>like</i> this:
 
 
-<pre>    HTTP/1.1 200 OK
+{% highlight html %}
+    HTTP/1.1 200 OK
     Date: Sun, 14 Jul 2013 21:14:23 GMT
     Content-Type: text/html
-    &lt;html&gt;
-    &lt;head&gt;
-    &lt;link rel="stylesheet" href="/stylesheet.css"&gt;
-    &lt;title&gt;Google dot com&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;form method="GET" action="/q"&gt;
-            &lt;label&gt;Search: &lt;/label&gt;
-            &lt;input type="text" placeholder="Type your search here!"&gt;
-        &lt;/form&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</pre>
+    <html>
+    <head>
+    <link rel="stylesheet" href="/stylesheet.css">
+    <title>Google dot com</title>
+    </head>
+    <body>
+        <form method="GET" action="/q">
+            <label>Search: </label>
+            <input type="text" placeholder="Type your search here!">
+        </form>
+    </body>
+    </html>
+{% endhighlight %}
 
 
 The server found the resource/document(HTTP Status Code 200) and the it is text/html. Below the header of the response is the document, written in <a href="http://en.wikipedia.org/wiki/HTML">HTML</a>. Assuming you're using a web browser, the webpage shown above will be rendered in your browser. To continue with the library metaphor, this is a librarian handing you the book it found at "slash" under "www.google.com"(Hopefully there aren't too many libraries like this).

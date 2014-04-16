@@ -12,7 +12,7 @@ Here's the first revision to my rotation encryption code from about 2 months ago
 
 
 <div class="img-wrapper">
-    <img src="http://www.cheddarcode.com/g/img/img1.gif">
+    <img src="/img/img1.gif">
 </div>
 
 

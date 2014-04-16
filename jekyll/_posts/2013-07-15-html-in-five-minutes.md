@@ -13,40 +13,40 @@ The next key part in web development is <a href="http://en.wikipedia.org/wiki/HT
 A webpage is a hierarchical arrangement of elements. These elements can be lone tags or a set of opening and closing tags. These tags describe to a browser how information should be displayed(along with CSS) and how it should interact(along with JavaScript). At its most basic level the HTML for a web page looks something like this:
 
 
-<pre>
-    &lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;The Worst Webpage Ever&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;The Worst Webpage Ever&lt;/h1&gt;
-        &lt;p&gt;Welcome to the worst webpage ever!&lt;/p&gt;
-        &lt;marquee&gt;Internet!!&lt;/marquee&gt;
-        &lt;img src="http://www.google.com/banner.jpg"&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</pre>
+{% highlight html %}
+    <html>
+    <head>
+        <title>The Worst Webpage Ever</title>
+    </head>
+    <body>
+        <h1>The Worst Webpage Ever</h1>
+        <p>Welcome to the worst webpage ever!</p>
+        <marquee>Internet!!</marquee>
+        <img src="http://www.google.com/banner.jpg">
+    </body>
+    </html>
+{% endhighlight %}
 
 
-Webpages have a fair amount of what's called <i>boilerplate</i>, meaning repetitive setup or minimum requirements necessary to get to get the webpage ready. As you can see above this boilerplate includes an element surrounding all others called html. It also includes a head tag, where the the 'meta' information for a webpage is stored, and the body tag, which contains information that will be displayed in the browser. Like I mentioned above these tags have an opening and a closing. The opening tag is simply the word wrapped in angled brackets(aka greater than and less than symbols) and the closing tag is the same word prefixed with a slash, also wrapped in angled brackets. There are some elements that only have only tag, such as the image tag, &lt;img&gt;. Also note the src within the img tag is called an attribute. It's telling the web browser where the find the image. Attributes can be attached to elements at free will, but the HTML specification only supports certain keyword attributes like 'src', 'href', 'style', and a handful of others. Spacing between tags is irrelevant, but there are a few generally accepted readable styles. For instance the same document shown above is again shown below, spaced differently. Still the same information:
+Webpages have a fair amount of what's called <i>boilerplate</i>, meaning repetitive setup or minimum requirements necessary to get to get the webpage ready. As you can see above this boilerplate includes an element surrounding all others called html. It also includes a head tag, where the the 'meta' information for a webpage is stored, and the body tag, which contains information that will be displayed in the browser. Like I mentioned above these tags have an opening and a closing. The opening tag is simply the word wrapped in angled brackets(aka greater than and less than symbols) and the closing tag is the same word prefixed with a slash, also wrapped in angled brackets. There are some elements that only have only tag, such as the image tag, <img>. Also note the src within the img tag is called an attribute. It's telling the web browser where the find the image. Attributes can be attached to elements at free will, but the HTML specification only supports certain keyword attributes like 'src', 'href', 'style', and a handful of others. Spacing between tags is irrelevant, but there are a few generally accepted readable styles. For instance the same document shown above is again shown below, spaced differently. Still the same information:
 
 
-<pre>
-    &lt;html&gt;
+{% highlight html %}
+    <html>
 
-        &lt;head&gt;
-            &lt;title&gt;The worst webpage ever&lt;/title&gt;
-        &lt;/head&gt;
+        <head>
+            <title>The worst webpage ever</title>
+        </head>
 
-        &lt;body&gt;
-            &lt;h1&gt;The Worst Webpage Ever&lt;/h1&gt;
-            &lt;p&gt;Welcome to the worst webpage ever!&lt;/p&gt;
-            &lt;marquee&gt;Internet!!&lt;/marquee&gt;
-            &lt;img src="http://www.google.com/banner.jpg"&gt;
-        &lt;/body&gt;
+        <body>
+            <h1>The Worst Webpage Ever</h1>
+            <p>Welcome to the worst webpage ever!</p>
+            <marquee>Internet!!</marquee>
+            <img src="http://www.google.com/banner.jpg">
+        </body>
 
-    &lt;/html&gt;
-</pre>
+    </html>
+{% endhighlight %}
 
 
 Web browsers have a default 'stylesheet' they use to display HTML elements. These styles can be(and are on almost all websites on the internet) overridden to customize colors, spacing, text styling, animations, sounds, etc..
