@@ -12,10 +12,10 @@ categories:
 Today let's look at version control. People use version control to manage different versions of software(among other things). I'm going to be discussing <a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a>, a distributed version control system(DVCS) that originally was built to manage linux kernel development.
 
 
-What makes git unique when compared to other version control systems is that it is distributed and it is written in C. There is no single master server that manages all history, meaning that there is no single point of failure in a git server deployment except in cases of poor architecture or planning. This is convenient for systems that have a goal of high availability; if one git server goes down another one can still be used. Or one can do away with a git server entirely and send <a href="http://en.wikipedia.org/wiki/Diff">diff patches</a> directly to a system. Because git is written in C it has the potential to be fast. In practical use it typically is very fast at completing local version control operations, such as branching and merging.
+What makes git unique when compared to other version control systems is that it is distributed and it is written in C. There is no single master server that manages all history, meaning that there is no single point of failure in a git server deployment except in cases of poor architecture or planning. This is convenient for systems that have a goal of high availability; if one git server goes down another one can still be used. Or one can do away with a git server entirely and send <a href="http://en.wikipedia.org/wiki/Diff">diff patches</a> directly to a system. Because git is written in C it has the potential to be fast. And in practical use it typically is indeed fast at completing local version control operations, such as branching and merging.
 
 
-Version control systems are architected as graphs. For those unfamiliar this means a system of nodes and lines that connect them. Every version of a codebase(or whatever information you're versioning) is stored as a node on a graph. The connections between nodes represents a lineages with a diff to show what change the lineage made.
+Version control systems are architected as graphs. For those unfamiliar this means a system of nodes and lines that connect them. Every version of a codebase(or whatever information you're versioning) is stored as a node on a graph. The connections between nodes represent different lineages of changes made to versioned files.
 
 
 Here's an image of a hypothetical git history to consider:
@@ -90,13 +90,13 @@ And in the Bugfix branch, the following changes occurred in the file:
 </div>
 
 
-The above notation is referred to as a diff. This is short for difference. Each of the lines in the above graph can be represented as a diff. This simply means that the lines in the graph each represent a change in the file(s) in the project.
+The above notation is referred to as a diff. This is short for difference. Each of the lines in the above graph can be represented as a diff. This simply means that the lines in the graph each represent a change in the versioned files in the project.
 
 
 Git represents changes in files purely in text. For each line that changes in a file between commits, there is a difference. That difference is what git walks through to create a lineage.
 
 
-In the example diffs above you may have noticed that there is a line wrapped in double at symbols. This line says where in the file a change occurred. Beneath this line there are lines prepended with either plus or minus. This represents either removals or additions in lines to a file. In our example, the diff between EA7BEEF and H07BEEF was the addition of a colon the the end of the function definition of the function titled hello. Since git works on a per-line basis, git detected that "def hello()" is not identical to "def hello():" and so the line was deleted and then readded with a colon.
+In the example diffs above you may have noticed that there is a line wrapped in double at symbols. This line says where in the file a change occurred. Beneath this line there are lines prepended with either plus or minus. This represents either removals or additions in lines to a file. In our example, the diff between EA7BEEF and H07BEEF was the addition of a colon the the end of the function definition of the function titled hello. Since git works on a per-line basis, git detected that "def hello()" is not identical to "def hello():" and so the line was deleted. A new line was added with the same contents and an additional colon.
 
 
 Likewise in the Feature branch git detected three additional lines that added an empty lineand a function declaration for a function titled "hi_there". 
