@@ -8,7 +8,7 @@ layout: base
         <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
         <ul class="categories">
             {% for category in page.categories %}
-            <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
+            <li><a title="Look up articles categorized as {{ category }}" href="/archive.html#{{ category }}">{{ category }}</a></li>
             {% endfor %}
         </ul>
     </div>
