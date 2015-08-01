@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Testing at the Resumator
-slug: testing-at-the-resumator
 date: 2013-07-12
-categories:
- - WebDev
+layout: post
+slug: testing-at-the-resumator
+tags:
+ - web-development
+title: Testing at the Resumator
 ---
 
 Recently at work I was tasked with creating a customer-facing self-service billing utility. Given the complexity required in the spec, testing was bound to be a pain in the butt. Further, because billing is such an important piece of a web application the testing had to be very thorough.

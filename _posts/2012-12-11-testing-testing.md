@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Testing, Testing
-slug: testing-testing
 date: 2012-12-11
-categories:
- - Python
+layout: post
+slug: testing-testing
+tags:
+ - python
+title: Testing, Testing
 ---
 
 I had the opportunity to attend a <a href="http://www.coderetreat.org">Global Day of Coderetreat</a> event this past weekend. I came in with few expectations(beyond seeing a neckbeard or two). There was quite a variety of platforms, programming languages, and age. And there were even females! The skill focus was on Test Driven Development(TDD). We formed pairs(preferably with a person with a language in common, but not always) several times throughout the day and worked on implementing Conway's Game of Life. I wrote in Python several times, worked with a guy writing in C#, and another guy writing in Ruby. It was nice to have exposure to unknown languages and certainly a welcome change of pace. C# felt especially different to me because of all the type declarations.

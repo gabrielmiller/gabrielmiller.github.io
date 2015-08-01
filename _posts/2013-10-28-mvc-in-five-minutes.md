@@ -1,10 +1,10 @@
 ---
-layout: post
-title: MVC in Five Minutes
-slug: mvc-in-five-minutes
 date: 2013-10-28
-categories:
- - WebDev
+layout: post
+slug: mvc-in-five-minutes
+tags:
+ - web-development
+title: MVC in Five Minutes
 ---
 
 I'm going to jump into a higher level topic today: design patterns. In particular I'm going to discuss MVC. In modern web development the <a href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller(MVC)</a> pattern is very dominant. It breaks down a web application's code into three distinctive groups, models, views, and controllers, hence its eponymous name. There are some minor variations on MVC(as well as further evolutions of it), but I'm going to talk strictly about vanilla MVC.

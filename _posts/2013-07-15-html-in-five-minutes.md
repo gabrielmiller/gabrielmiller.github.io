@@ -1,10 +1,10 @@
 ---
-layout: post
-title: HTML in Five Minutes
-slug: html-in-five-minutes
 date: 2013-07-15
-categories:
- - WebDev
+layout: post
+slug: html-in-five-minutes
+tags:
+ - web-development
+title: HTML in Five Minutes
 ---
 
 The next key part in web development is <a href="http://en.wikipedia.org/wiki/HTML">HTML</a>. HTML is markup language that describes to a web browser(Chrome, Firefox, Internet Explorer, etc.) how to construct a document(It's used for more than just this, but this explanation will suffice). There are a couple versions of the HTML standard, just like there were with HTTP. The most recent version is HTML5, which added a lot of <a href="http://en.wikipedia.org/wiki/HTML5#Features">modern features</a> to the specification. Every modern web browser follows W3C Standards(Each one implements things a little bit differently, however), so that an HTML document can be viewed in different web browsers interchangeably. The goal is for the standard to be platform independent. When I say platform here I am referring to both software platforms--Windows, Linux, OSX, etc.--and hardware platforms--computers(x86, x64, etc.), Smartphones/Tablets(ARM, x86, etc.), etc.. Ideally somebody can look at the same webpage on two different types of computers, on two different Operating Systems, and two different web browsers, but still see the same information and get the same or a very similar presentation of it. 

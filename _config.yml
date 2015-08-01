@@ -4,6 +4,6 @@ encoding: UTF-8
 
 url: "http://www.gabrielmiller.org/"
 
-permalink: "/:year/:title.html"
+permalink: pretty #"/:year/:title"
 
 highlighter: pygments

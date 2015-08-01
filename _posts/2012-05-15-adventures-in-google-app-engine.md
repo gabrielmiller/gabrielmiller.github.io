@@ -1,11 +1,11 @@
 ---
-layout: post
-title: Adventures in Google App Engine
-slug: adventures-in-google-app-engine
 date: 2012-05-15
-categories:
- - WebDev
- - Python
+layout: post
+slug: adventures-in-google-app-engine
+tags:
+ - web-development
+ - python
+title: Adventures in Google App Engine
 ---
 
 I've been working my way through the Web Application Engineering course offered at <a href="http://www.udacity.com">http://www.udacity.com</a>.This past weekend I went through unit 3 and had my first taste of Google App Engine. I didn't think it would be as rewarding as it was. I highly recommend this online course! By the end of the lesson I had churned out a silly website: <a href="http://gm-img.appspot.com">http://gm-img.appspot.com</a>. It's a simple image and text sharing board. Users enter their names, some optional text, and select an image to share.

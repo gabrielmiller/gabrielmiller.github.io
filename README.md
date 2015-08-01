@@ -8,19 +8,14 @@ This blog will be easier to maintain(than my previous, django based blog) as it 
 
 ## Instructions
 
-### Development
+### Installation
 
-#### Jekyll
-
-First install ruby. I am developing against 2.1.0p0, but older versions should be fine. Next install jekyll and compile the website.
-
-    cd jekyll
-    gem install jekyll
-    jekyll build
-
-To watch files, build when they are edited, and run an internal HTTP server for developing, use the following parameters: 
-
-    jekyll serve --watch
+    git clone git@github.com:gabrielmiller/gabrielmiller.github.io.git
+    cd gabrielmiller.github.io
+    rvm install 2.1.1
+    rvm —default use 2.1.1
+    gem install bundler
+    bundle install
 
 
 #### Sass
@@ -32,11 +27,3 @@ Make sure you have ruby installed. You'll also need to install compass:
 For development you can run the following flags on compass to watch for file changes and recompile css when changes are made: 
 
     compass watch -c scss/config.rb
-
-### Deployment
-
-Run the compilation bash script:
-
-    ./compile.sh
-
-This will compile the site. To deploy, push the compiled contents of jekyll/_site to your server.

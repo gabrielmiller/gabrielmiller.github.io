@@ -1,10 +1,10 @@
 ---
-layout: post
-title: HTTP in Five Minutes
-slug: http-in-five-minutes
 date: 2013-07-14
-categories:
- - WebDev
+layout: post
+slug: http-in-five-minutes
+tags:
+ - web-development
+title: HTTP in Five Minutes
 ---
 
 This is the first post in an instructional series on Web Technologies. By the end of this series I plan to have covered HTML, CSS, JavaScript, Databases, System Architecture, Design Patterns, Application Coding, Web Security and potentially some other things like Computer Networking. We'll begin with HTTP, a protocol that is crucial to web development. Hypertext Transfer Protocol is a protocol used all over the place on the internet to transfer data. It's how your web browser acquires the data to view most web pages.

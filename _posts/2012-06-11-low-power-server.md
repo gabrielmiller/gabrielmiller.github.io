@@ -1,11 +1,11 @@
 ---
-layout: post
-title: Low Power Server
-slug: low-power-server
 date: 2012-06-11
-categories:
- - Linux
- - Hardware
+layout: post
+slug: low-power-server
+tags:
+ - linux
+ - hardware
+title: Low Power Server
 ---
 
 I recently picked up a new computer to run as a headless web and file server 24/7. My main criteria was it must be x86 in order to run commonly available programs and it must be low power. After a fair amount of research I came upon a good fit. The motherboard is created by Intel: the DN2800MT. It uses a processor marketed toward mobile devices, the Atom N2800, and a low power chipset, NM10. The board is the newer Cedar trail generation successor to Intel's notoriously low power 945GSE chipset. I coupled it with a Samsung 830 solid state drive and a high efficiency AC/DC power adapter(Meanwell's GS40). In regards to power draw, the setup idles at 9 to 10 watts according to my Killawatt. I haven't done extensive power testing on the unit, however I have to say I am very happy with its performance thus far.

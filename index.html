@@ -7,8 +7,8 @@ layout: base
         <h2>{{ site.posts.first.title }}</h2>
         <span class="date">{{ site.posts.first.date | date: "%Y-%m-%d" }}</span>
         <ul class="categories">
-            {% for category in site.posts.first.categories %}
-            <li><a href="/archive.html#{{ category }}">{{ category }}</a></li>
+            {% for tag in site.posts.first.tags %}
+            <li><a href="/archive#{{ tag | downcase }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
             {% endfor %}
         </ul>
     </div>

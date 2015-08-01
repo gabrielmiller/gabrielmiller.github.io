@@ -1,13 +1,13 @@
 ---
-layout: post
-title: New Undertakings
-slug: new-undertakings
 date: 2012-05-05
-categories:
- - PHP
- - Django
- - WebDev
- - Python
+layout: post
+slug: new-undertakings
+tags:
+ - php
+ - django
+ - web-development
+ - python
+title: New Undertakings
 ---
 
 I've beefed up my effort to learn PHP recently and I must say I'm extremely grateful to have an understanding of programming from Python's perspective. PHP seems so far to be similar. No doubt the data structures are very similar. And I'm finding the syntax to look much like javascript. Lots of curly braces and semicolons(A foreign concept from a Python background). It seems to have a lot more hodge podge, but I enjoy how simple it is to test code in a browser and I'm appreciating its vast amounts of documentation online. In the process I find myself constantly thinking that trial and error learning is a blast.

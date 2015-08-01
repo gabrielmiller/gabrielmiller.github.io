@@ -1,12 +1,12 @@
 ---
-layout: post
-title: Git Crash Course, Part 1
-slug: git-crash-course-part1
 date: 2014-04-16
-categories:
- - Git
- - VCS
+slug: git-crash-course-part1
+layout: post
+tags:
+ - git
+ - vcs
  - code
+title: Git Crash Course, Part 1
 ---
 
 Today let's look at version control. People use version control to manage different versions of software(among other things). I'm going to be discussing <a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a>, a distributed version control system(DVCS) that originally was built to manage linux kernel development.

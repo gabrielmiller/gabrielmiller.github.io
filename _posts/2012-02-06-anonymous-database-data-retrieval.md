@@ -1,8 +1,8 @@
 ---
-layout: post
-title: Anonymous database data retrieval
-slug: anonymous-database-data-retrieval
 date: 2012-02-06
+layout: post
+slug: anonymous-database-data-retrieval
+title: Anonymous database data retrieval
 ---
 
 

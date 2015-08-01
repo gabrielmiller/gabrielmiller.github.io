@@ -1,11 +1,11 @@
 ---
-layout: post
-title: Rotation Encryption
-slug: rotation-encryption
 date: 2012-01-30
-categories:
- - Python
- - Code
+layout: post
+slug: rotation-encryption
+tags:
+ - python
+ - code
+title: Rotation Encryption
 ---
 
 I came upon the idea of changing viewing angle while pondering something completely unrelated--DNA frameshifts, if I recall. This isn't really encryption, but rather it's interpreting data from a different angle. It's more of an obfuscation. As for real world implication... you'd have to dig into it a little deeper than I have.

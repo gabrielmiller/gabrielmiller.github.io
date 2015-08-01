@@ -1,13 +1,13 @@
 ---
-layout: post
-title: Php, Aspen, Leaflet & GeoJSON, Oh my!
-slug: php-aspen-leaflet-geojson-oh-my
 date: 2012-07-17
-categories:
- - WebDev
- - Python
- - PHP
- - Javascript
+layout: post
+slug: php-aspen-leaflet-geojson-oh-my
+tags:
+ - web-development
+ - python
+ - php
+ - javascript
+title: Php, Aspen, Leaflet & GeoJSON, Oh my!
 ---
 
 It's been a while since I've written an entry as I've been busy spelunking deep in the depths of the internet. First off, I brought a close to my first two larger PHP projects. Both of them use a MySQL database, so I think for my next database project I'll try to throw in PostgreSQL. I have a couple ideas floating around but what will rise to the top of the glass next has yet to be seen. I've been reading about all of the following:
