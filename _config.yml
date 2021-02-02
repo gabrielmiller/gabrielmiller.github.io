@@ -6,4 +6,4 @@ url: "http://www.gabrielmiller.org/"
 
 permalink: pretty #"/:year/:title"
 
-highlighter: pygments
+highlighter: rouge
