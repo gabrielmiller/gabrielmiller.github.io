@@ -1,6 +1,9 @@
-@import "compass/css3/user-interface";
-@import "compass/layout/sticky-footer";
-@import "breakpoint";
+---
+---
+
+// @import "compass/css3/user-interface";
+// @import "compass/layout/sticky-footer";
+// @import "breakpoint";
 
 $footer-height: 96px;
 
@@ -13,7 +16,7 @@ $color: #5b87a8;
 $color-bright: #7ebbe8;
 $color-link: #07b;
 
-@include sticky-footer($footer-height, "#page-wrapper", "#footer-spacer", "#footer");
+// @include sticky-footer($footer-height, "#page-wrapper", "#footer-spacer", "#footer");
 
 * {
     margin: 0;
@@ -75,7 +78,7 @@ h5 {
     #navigation-wrapper {
         background: #444;
         border-bottom: 4px solid $color-bright;
-        @include user-select(none);
+        // @include user-select(none);
 
         h1 {
             display: inline-block;
@@ -112,7 +115,7 @@ h5 {
             }
         }
 
-        @include breakpoint($break-tablet){
+        /* @include breakpoint($break-tablet){
             label {
                 display: none;
             }
@@ -189,6 +192,7 @@ h5 {
                 }
             }
         }
+        */
     }
 
     #content {
@@ -214,7 +218,7 @@ h5 {
         }
         p, li, pre {
             font-size: 16px;
-            @include breakpoint($break-smartphone){
+            /*@include breakpoint($break-smartphone){
                 font-size: 20px;
             }
             @include breakpoint($break-tablet){
@@ -222,7 +226,7 @@ h5 {
             }
             @include breakpoint($break-desktop){
                 font-size: 28px;
-            }
+            }*/
         }
         #archives, #projects, #about {
             padding: 8px;
@@ -263,7 +267,7 @@ h5 {
                 .remove { color: #b04050; }
             }
 
-            .python, .html {
+            .language-python .code, .language-html .code {
                 color: #f8f8f2;
 
                 .hll { background: #49483e; }
@@ -389,7 +393,7 @@ h5 {
 }
 
 #footer {
-    @include user-select(none);
+    // @include user-select(none);
     color: #ddd;
     background: #444;
 
