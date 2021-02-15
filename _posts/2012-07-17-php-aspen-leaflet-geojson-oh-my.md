@@ -13,7 +13,7 @@ title: Php, Aspen, Leaflet & GeoJSON, Oh my!
 It's been a while since I've written an entry as I've been busy spelunking deep in the depths of the internet. First off, I brought a close to my first two larger PHP projects. Both of them use a MySQL database, so I think for my next database project I'll try to throw in PostgreSQL. I have a couple ideas floating around but what will rise to the top of the glass next has yet to be seen. I've been reading about all of the following:
 
 
- * PostgreSQL, PostGIS, Mapserver, Geoserver</li>
+ * PostgreSQL, PostGIS, Mapserver, Geoserver
  * <a href="http://aspen.io">Aspen</a>, a unique web framework written in large part by a guy I met at PghPy
  * CakePHP
  * <a href="http://leaflet.cloudmade.com/">Leaflet</a>
