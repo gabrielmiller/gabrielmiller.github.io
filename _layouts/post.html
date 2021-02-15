@@ -3,16 +3,16 @@ layout: base
 ---
 
 <div class="post">
-    <div class="header">
+    <div class="post-header">
         <h2>{{ page.title }}</h2>
         <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
-        <ul class="categories">
+        <ul class="post-categories">
             {% for tag in page.tags %}
             <li><a title="Look up articles categorized as {{ tag }}" href="/archive#{{ tag | downcase }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
             {% endfor %}
         </ul>
     </div>
-    <div class="body">
+    <div class="post-content">
         {{ content }}
     </div>
 </div>
