@@ -5,25 +5,25 @@ slug: archive
 title: Archive
 ---
 
-<div id="archives">
-    <div id="categories">
+<div>
+    <div>
         <h2>Categories:</h2>
-        <ul>
+        <ul class="posts-categories">
             {% for tag in site.tags %}
             <li>
                 <a href="#{{ tag[0] | downcase }}">{{ tag[0] | replace: '-', ' ' | capitalize }}</a>
-                <span></span>
             </li>
             {% endfor %}
         </ul>
     </div>
-    <div id="posts">
+    <div>
         <h2>Posts:</h2>
-        <span id="filter">Displaying posts <span id="current-filter"></span></span>
+        <span id="filter"></span>
+        <br>
         <ul>
         {% for post in site.posts %}
-            <li class="{% for tag in post.tags %}{{ tag }} {% endfor %} post">
-                <span>[{{ post.date | date: "%Y-%m-%d" }}]</span>
+            <li class="post" data-id="{{ post.date | date: "%Y%m%d"}}">
+                <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
                 <a href="/{{ post.date | date: "%Y"}}/{{ post.date | date: "%m"}}/{{ post.date | date: "%d"}}/{{ post.slug }}">{{ post.title }}</a>
             </li>
         {% endfor %}
@@ -32,21 +32,45 @@ title: Archive
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-        $('#categories a').click(function(){
-            highlightCategory($(this).context.hash.slice(1));
-        });
-        highlightCategory(window.location.hash.slice(1));
-    });
+    document.addEventListener("DOMContentLoaded", function(e) {
+        function filterPosts() {
+            var tagsToPostsMap = {};
+            var tagsToReadableStringMap = {};
+            var hash = location.hash.substr(1);
 
-    function highlightCategory(category){
-        if(category === undefined || category === ''){
-            $('#current-filter').text('from all categories');
-            return;
+            {% for tag in site.tags %}
+            tagsToPostsMap['{{ tag[0] }}'] = [];
+            tagsToReadableStringMap['{{ tag[0] }}'] = '{{ tag[0] | replace: '-', ' ' }}';
+            {% endfor %}
+
+            {% for post in site.posts %}
+                {% for tag in post.tags %}
+                    tagsToPostsMap['{{ tag }}'].push('{{ post.date | date: "%Y%m%d"}}');
+                {% endfor %}
+            {% endfor%}
+
+            if (!hash in tagsToPostsMap) {
+                return;
+            }
+
+            document.getElementById('filter').innerHTML = hash === ''
+                ? 'Displaying all posts.'
+                : `Displaying posts tagged as ${tagsToReadableStringMap[hash]}. <a href="#">Clear filter</a>`;
+
+            var isFiltering = hash !== '';
+            var postsToDisplay = tagsToPostsMap[hash];
+            var allPosts = document.querySelectorAll(`li.post`);
+
+            for (var post of allPosts) {
+                if (isFiltering && !postsToDisplay.includes(post.dataset.id)) {
+                    post.classList.add('filtered');
+                } else {
+                    post.classList.remove('filtered');
+                }
+            }
         }
-        var post_selector = '.'+category;
-        $('.post').fadeTo(0, 0.1);
-        $(post_selector).fadeTo(0, 1);
-        $('#current-filter').html('categorized as '+category+' [<a href="/archive">Remove</a>]');
-    }
+
+        window.addEventListener('hashchange', filterPosts);
+        filterPosts();
+    });
 </script>

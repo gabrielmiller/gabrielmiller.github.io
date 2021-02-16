@@ -1,9 +1,13 @@
 name: "L. Gabriel Miller"
-description: "Computer nerd renaissance man"
+description: "Some guy on the internet"
 encoding: UTF-8
 
 url: "http://www.gabrielmiller.org/"
 
 permalink: pretty #"/:year/:title"
 
-highlighter: pygments
+highlighter: rouge
+
+sass:
+  style: compressed
+  sass_dir: css
