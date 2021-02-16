@@ -8,7 +8,7 @@ layout: base
         <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
         <ul class="post-categories">
             {% for tag in page.tags %}
-            <li><a title="Look up articles categorized as {{ tag }}" href="/archive#{{ tag | downcase }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
+            <li><a title="Look up posts categorized as {{ tag }}" href="/archive#{{ tag | downcase }}">{{ tag | replace: '-', ' ' | capitalize }}</a></li>
             {% endfor %}
         </ul>
     </div>

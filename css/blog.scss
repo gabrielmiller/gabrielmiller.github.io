@@ -56,6 +56,16 @@ p, ul, pre {
 
 .img-wrapper {
     overflow: auto;
+
+    &.float-left {
+        float: left;
+        margin-right: 1em;
+    }
+
+    &.float-right {
+        float: right;
+        margin-left: 1em;
+    }
 }
 
 h1 {
@@ -195,6 +205,17 @@ h5 {
 
 .post-content {
     margin-top: .5em;
+}
+
+.post {
+    &.filtered {
+        display: none;
+    }
+}
+
+ul.posts-categories > li {
+    display: inline;
+    margin-right: 1em;
 }
 
 @media screen and (max-width: 30em) {
